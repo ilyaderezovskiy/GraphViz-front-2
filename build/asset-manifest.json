@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GraphViz-front/static/css/main.e7a42480.css",
+    "main.js": "/GraphViz-front/static/js/main.c3b1c969.js",
+    "index.html": "/GraphViz-front/index.html",
+    "main.e7a42480.css.map": "/GraphViz-front/static/css/main.e7a42480.css.map",
+    "main.c3b1c969.js.map": "/GraphViz-front/static/js/main.c3b1c969.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7a42480.css",
+    "static/js/main.c3b1c969.js"
+  ]
+}
