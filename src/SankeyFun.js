@@ -292,7 +292,7 @@ export default function SankeyFun (
 
   if (G) node.attr("fill", ({ index: i }) => nodeColors[i]);
   if (Tt) node.append("title").text(({ index: i }) => {
-    return !Tt[i].includes("col") & !Tt[i].includes("pass") ? Tt[i] : ""; //+ "\ninfo" : "";
+    return !Tt[i].includes("col") ? Tt[i] : ""; //+ "\ninfo" : "";
   })
 
   const link = svg
@@ -428,7 +428,7 @@ export default function SankeyFun (
     .attr("dy", "0.35em")
     .attr("text-anchor", "end")
     .attr("transform", null)
-    .text(function(d) { return !d.source.id.includes("col") & !d.target.id.includes("pass") & d.value !== 0 ? d.valueLabel : ""; })
+    .text(function(d) { return !d.source.id.includes("col") & d.value !== 0 ? d.valueLabel : ""; })
     .attr("text-anchor", "end");
 
   if (Tl) {
@@ -474,7 +474,7 @@ export default function SankeyFun (
       .attr("y", (d) => (d.y1 + d.y0) / 2) //(d) => (d.y1 + d.y0) / 2 + 20)
       .attr("dy", "0.35em")
       .attr("text-anchor", "start")
-      .text(({ index: i }) => !Tt[i].includes("col") & !Tt[i].includes("pass") & Tt[i].split('\n')[1] !== "0" ? nodeLabels[Tt[i].split('\n')[0]] : "");
+      .text(({ index: i }) => !Tt[i].includes("col") & Tt[i].split('\n')[1] !== "0" ? nodeLabels[Tt[i].split('\n')[0]] : "");
   }
 
   function addFilter(groupNumer, filter) {
